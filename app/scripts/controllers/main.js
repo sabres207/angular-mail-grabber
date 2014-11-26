@@ -35,6 +35,7 @@ angular.module('angularMailGrabberApp')
                     function(data) {
                         $scope.emailsExtracted = _.uniq(data.contents.match(mailRegex));
                         $scope.$apply();
+                        alert('how did i get there?');
                     })
                     .error(function() {
                         alert('sorry man');

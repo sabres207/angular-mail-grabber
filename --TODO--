@@ -8,3 +8,6 @@
 5) add some kind of 'about me' view.
 6) make the site available online, or figure out how could people use it on the computer without downloading node.js and stuff like that.
 7) make it available on phones via phonegap.
+8) add a timeout when fetching data. if it fails, we can let the user choose a new timeout.
+9) nice box with scroll for the results
+10) nice messages for the user if he does stupid things, or for any reason at all.
