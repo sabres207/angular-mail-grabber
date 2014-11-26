@@ -1,0 +1,10 @@
+++====++
+++TODO++
+++====++
+1) get the page content somehow only using angularjs utilities.
+2) make the current functionality look normal.
+3) when trying to extract from a URL, show the user something is going on on the background.
+4) add an option to extract to an XL file.
+5) add some kind of 'about me' view.
+6) make the site available online, or figure out how could people use it on the computer without downloading node.js and stuff like that.
+7) make it available on phones via phonegap.
