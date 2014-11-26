@@ -8,7 +8,7 @@
  * Controller of the angularMailGrabberApp
  */
 angular.module('angularMailGrabberApp')
-  .controller('MainCtrl', ['$scope', '$http', function ($scope) {
+  .controller('MainCtrl', ['$scope', 'underscore', function ($scope, underscore) {
         var holder = 'please type either text or url to extract emails from';
         $scope.emailsExtracted = [];
         $scope.holder = holder;
@@ -33,7 +33,7 @@ angular.module('angularMailGrabberApp')
                         encodeURIComponent(string) +
                         '&callback=?',
                     function(data) {
-                        $scope.emailsExtracted = _.uniq(data.contents.match(mailRegex));
+                        $scope.emailsExtracted = underscore.uniq(data.contents.match(mailRegex));
                         $scope.$apply();
                         alert('how did i get there?');
                     })
@@ -41,7 +41,7 @@ angular.module('angularMailGrabberApp')
                         alert('sorry man');
                     });
             } else {
-                $scope.emailsExtracted = _.uniq(string.match(mailRegex));
+                $scope.emailsExtracted = underscore.uniq(string.match(mailRegex));
             }
         };
   }]);
