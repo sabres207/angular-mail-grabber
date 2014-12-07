@@ -1,13 +1,16 @@
-<div class="container">
+<div class="jumbotron white-color">
     <textarea name="rawdata" rows="12" cols="50" ng-model="area.text" ng-focus="changeHolderState(true)"
-              ng-blur="changeHolderState(false, area.text)" placeholder={{holder}}></textarea>
+          ng-blur="changeHolderState(false, area.text)" placeholder={{holder}}></textarea>
+    <br/>
+    <br/>
+    <button class="btn btn-primary" ng-click="extractMails(area.text, false)" style="left: 20px">extract from text</button>
+    <button class="btn btn-primary" ng-click="extractMails(area.text, true)">extract from URL</button>
     <br />
-    <button ng-click="extractMails(area.text, false)">extract from text</button>
-    <button ng-click="extractMails(area.text, true)">extract from URL</button>
-    <ul>
-        <li ng-repeat="email in emailsExtracted">
+    <br />
+    <ul class="list-group">
+        <li class="list-group-item list-group-item-info" ng-show="emailsExtracted.length > 0">count - {{emailsExtracted.length}}</li>
+        <li class="list-group-item" ng-repeat="email in emailsExtracted">
             {{email}}<br />
         </li>
-        <li>count - {{emailsExtracted.length}}</li>
     </ul>
 </div>

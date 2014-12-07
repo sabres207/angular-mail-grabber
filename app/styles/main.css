@@ -77,3 +77,15 @@ body {
     border-bottom: 0;
   }
 }
+
+.centered {
+    margin: 0 auto;
+}
+
+.white-color {
+    background-color: white;
+}
+
+.mailslist {
+    list-style-type: none;
+}

@@ -1,7 +1,9 @@
 {
   "name": "angularmailgrabber",
   "version": "0.0.0",
-  "dependencies": {},
+  "dependencies": {
+    "express": "^4.10.4"
+  },
   "devDependencies": {
     "grunt": "^0.4.1",
     "grunt-autoprefixer": "^0.7.3",
@@ -31,6 +33,7 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "grunt test"
+    "test": "grunt test",
+    "start": "node app/server.js"
   }
 }
